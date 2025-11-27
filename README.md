@@ -1,6 +1,6 @@
 ##### Este microservicio permite crear, listar, enriquecer y buscar por similitud leads de restaurantes.
 
-Objetivo del proyecto:
+### Objetivo del proyecto:
     Crear leads de restaurantes
     Guardar leads en PostgreSQL usando SQLAlchemy
     Consumir API externa (API Ninjas) para obtener datos de ciudades
@@ -8,7 +8,7 @@ Objetivo del proyecto:
     Probado con Swagger y postman
     
 
-Tecnologias usadas
+### Tecnologias usadas
     Python 3.10+
     FastAPI
     SQLAlchemy
@@ -20,7 +20,7 @@ Tecnologias usadas
     Git + GitHub
 
 
-Crear y activar entorno virtual
+### Crear y activar entorno virtual
     Windows PowerShell:
     pip install uv
 ### comprobar que esta instalado  
@@ -32,31 +32,33 @@ Crear y activar entorno virtual
 ### pyproyect.toml
     uv sync
 ### instalar dependencias
+    uv sync
     uv add fastapi[standard] sqlalchemy psycopg2 httpx python-dotenv
-### correr con uv
-    uv run fastapi dev app/main.py
-    
-    Instalar dependencias
-        pip install -r requirements.txt
-        uv pip freeze > requirements.txt
-
 
     
-Configurar la base de datos PostgreSQL
+    
+#### Instalar dependencias pip install -r requirements.txt uv pip freeze > requirements.txt #####
+
+  
+### Configurar la base de datos PostgreSQL
     Abrir PgAdmin o psql
     Crear base de datos:
     CREATE DATABASE leads_db; 
-### que la contraseña coincida
+### Que la contraseña coincida
 
 
-Configuración de entorno
+### Configuración de entorno
 ### Crea un archivo .env en la raíz del proyecto:
     DATABASE_URL=postgresql://postgres:contraseña@localhost:5432/nombredelatabla
     EXTERNAL_API_URL=https://api.api-ninjas.com/v1/geocoding
     EXTERNAL_API_KEY=TU_API_KEY_REAL
 
 
-Endpoints
+### Correr con uv
+    uv run fastapi dev app/main.py
+
+
+### Endpoints
 ### Health check
     GET /health
 
@@ -87,7 +89,7 @@ name= crunchi
 
 
 
-Pruebas en Postman
+### Pruebas en Postman
 
     http://localhost:8000/api/leads
 
@@ -132,7 +134,7 @@ Pruebas en Postman
 
 
 
-Api externa utilizada
+### Api externa utilizada
 #### Este proyecto consume una API externa llamada API Ninjas, específicamente su endpoint de Geocoding, para obtener información geográfica de una ciudad ingresada por el usuario.
 
 ### La API recibe el nombre de la ciudad, la longitud, latitud, el pais y el estado.
