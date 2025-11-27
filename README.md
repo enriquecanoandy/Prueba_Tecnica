@@ -5,9 +5,8 @@ Objetivo del proyecto:
     Guardar leads en PostgreSQL usando SQLAlchemy
     Consumir API externa (API Ninjas) para obtener datos de ciudades
     Buscar leads similares usando una lógica de similitud básica
-    Probado con Swagger
-
-
+    Probado con Swagger y postman
+    
 
 Tecnologias usadas
     Python 3.10+
@@ -21,7 +20,6 @@ Tecnologias usadas
     Git + GitHub
 
 
-
 Crear y activar entorno virtual
     Windows PowerShell:
     pip install uv
@@ -31,6 +29,8 @@ Crear y activar entorno virtual
     uv venv
 ### activalo
     .\venv\Scripts\activate 
+### pyproyect.toml
+    uv sync
 ### instalar dependencias
     uv add fastapi[standard] sqlalchemy psycopg2 httpx python-dotenv
 ### correr con uv
@@ -45,18 +45,18 @@ Crear y activar entorno virtual
 Configurar la base de datos PostgreSQL
     Abrir PgAdmin o psql
     Crear base de datos:
-    CREATE DATABASE leads_db;
+    CREATE DATABASE leads_db; 
+### que la contraseña coincida
 
 
 Configuración de entorno
-    Crea un archivo .env en la raíz del proyecto:
+### Crea un archivo .env en la raíz del proyecto:
     DATABASE_URL=postgresql://postgres:contraseña@localhost:5432/nombredelatabla
     EXTERNAL_API_URL=https://api.api-ninjas.com/v1/geocoding
     EXTERNAL_API_KEY=TU_API_KEY_REAL
 
 
 Endpoints
-
 ### Health check
     GET /health
 
@@ -138,6 +138,10 @@ Api externa utilizada
 ### La API recibe el nombre de la ciudad, la longitud, latitud, el pais y el estado.
 
     https://api.api-ninjas.com/v1/geocoding
+
+
+
+
 
 
 
