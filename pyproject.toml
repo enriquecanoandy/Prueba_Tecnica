@@ -1,7 +1,7 @@
 [project]
 name = "prueba"
 version = "0.1.0"
-description = "Add your description here"
+description = "Microservicio FastAPI para leads con Postgres y API externa"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
